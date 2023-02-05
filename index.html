@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TailwindCSS Boilerplate</title>
-</head>
-
-<body class="bg-gradient-to-bl from-purple-400 to-zinc-500 h-screen">
-    <section class="container mx-auto pt-20">
-        <h1 class="text-white text-3xl text-center">
-            <p class="mb-8">Vite + Tailwind CSS + Awesomeness</p>
-        </h1>
-        <div class="mx-auto text-center">
-            <a href='https://github.com/hasinhayder/tailwind-boilerplate' class=" text-white bg-cyan-500 font-semibold border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Download</a>
-            <a target="_blank" href='https://github.com/hasinhayder' class="ml-4 text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Don't Click</a>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="/asset/css/style.css">
+    <title>Login Page</title>
+  </head>
+  <body class="h-screen relative bg-[#E7F3FF] text-[#292E5A]">
+    <div class="app-default w-[500px] h-[530px] background-layer top-[40%]"></div>
+    <div class="app-default w-[400px] bg-white top-1/2 px-12 py-14">
+      <h2 class="font-bold text-3xl m-0">549, -</h2>
+      <small class="block text-sm pt-3">Pay now, later or split up.</small>
+      <button class="buy-btn">BUY ONLINE</button>
+      <section>
+        <span class="block text-sm pt-4 mb-5"><b>18 in online storage</b> - can be shipped today</span>
+        <div class="items text-sm">
+          <div class="item flex flex-row">
+            <div class="checkbox">
+              <input id="checkbox-1" type="checkbox" />
+              <label for="checkbox-1"><i class="material-icons">done</i></label>
+            </div>
+            <span><a href="#">Lightning fast delivery</a></span>
+          </div>
+          <div class="item flex flex-row">
+            <div class="checkbox">
+              <input id="checkbox-1" type="checkbox" />
+              <label for="checkbox-1"><i class="material-icons">done</i></label>
+            </div>
+            <span><a href="#">Free shipping</a> over NOK 800</span>
+          </div>
         </div>
-    </section>
-    <script type="module" src="/assets/js/main.js"></script>
-</body>
+      </section>
+      <div class="bg-[#F3F5FF] p-2 rounded-md mt-6">
+        <span class="text-[#000000] text-sm font-medium">See how fast you can get the item</span>
+        <div class="flex gap-2 font-medium text-sm mt-2 h-11">
+          <div class="relative flex flex-1">
+            <i class="absolute top-1/2 -translate-y-1/2 left-2 material-icons">search</i>
+            <input class="w-full rounded-md placeholder:text-[#292E5A]  border border-[#d4d8fb] bg-transparent pl-10" type="text" value="" placeholder="Zip Code"/>
+          </div>
+          <button class="w-20 bg-white rounded-md">Check</button>
+        </div>
+      </div>
+      <button class="pickup-btn">PICK UP IN STORE</button>
+    </div>
 
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
 </html>
