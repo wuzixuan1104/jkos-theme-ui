@@ -1,5 +1,6 @@
 const { resolve } = require('path')
 export default {
+    base: '/jkos-theme-ui-01/',
     plugins: [],
     server: {
         open: '/index.html',
