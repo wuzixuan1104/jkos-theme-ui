@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preload" href="/asset/css/style.css">
+    <title>Login Page</title>
+    
+    <script type="module" crossorigin src="/assets/style-fac82e35.js"></script>
+    <link rel="stylesheet" href="/assets/style-1c9cf2df.css">
+  </head>
+  <body class="h-screen w-full top-0 left-0 fixed bg-[#E7F3FF] text-[#292E5A]">
+    <div class="app-default w-[500px] h-[530px] background-layer top-[40%]"></div>
+    <div id="app" class="fixed -bottom-full w-[400px] bg-white px-12 py-14 dialog rounded-3xl">
+      <h2 class="font-bold text-3xl m-0">549, -</h2>
+      <small class="block text-sm pt-3">Pay now, later or split up.</small>
+      <button class="buy-btn">BUY ONLINE</button>
+      <section>
+        <span class="block text-sm pt-4 mb-5"><b>18 in online storage</b> - can be shipped today</span>
+        <div class="items text-sm">
+          <div class="item flex flex-row">
+            <div class="checkbox">
+              <div class="flex items-center mr-4 mb-2">  
+                <input type="checkbox" id="checkbox-2" class="opacity-0 absolute h-6 w-6" checked />  
+                <div class="checkbox-bg rounded-full w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2">
+                  <i class="material-icons text-md">done</i>
+                </div>
+                <label for="checkbox-2" class="select-none"><span><i>Free shipping</i> over NOK 800</span></label>  
+              </div>  
+            </div>
+          </div>
+          <div class="item flex flex-row">
+            <div class="checkbox">
+              <div class="flex items-center mr-4 mb-2">  
+                <input type="checkbox" id="checkbox-1" class="opacity-0 absolute h-6 w-6" checked />  
+                <div class="checkbox-bg rounded-full w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2">
+                  <i class="material-icons">done</i>
+                </div>
+                <label for="checkbox-1" class="select-none"><span><i>Lightning fast delivery</i></span></label>  
+              </div>  
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="bg-[#F3F5FF] p-2 rounded-md mt-6">
+        <span class="text-[#000000] text-sm font-medium">See how fast you can get the item</span>
+        <div class="flex gap-2 font-medium text-sm mt-2 h-11">
+          <div class="relative flex flex-1">
+            <i class="absolute top-1/2 -translate-y-1/2 left-2 material-icons">search</i>
+            <input class="w-full rounded-md placeholder:text-[#292E5A]  border border-[#d4d8fb] bg-transparent pl-10" type="text" value="" placeholder="Zip Code"/>
+          </div>
+          <button class="w-20 bg-white rounded-md">Check</button>
+        </div>
+      </div>
+      <button class="pickup-btn">PICK UP IN STORE</button>
+    </div>
+    
+    <script>
+      setTimeout(() => {
+        document.getElementById('app').classList.add('open');
+      }, 1000)
+    </script>
+  </body>
+</html>
