@@ -5,12 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="/asset/css/style.css">
+    <link rel="preload" href="/asset/css/style.css">
     <title>Login Page</title>
+    <script type="module" src="/assets/js/main.js"></script>
   </head>
-  <body class="h-screen relative bg-[#E7F3FF] text-[#292E5A]">
+  <body class="h-screen w-full top-0 left-0 fixed bg-[#E7F3FF] text-[#292E5A]">
     <div class="app-default w-[500px] h-[530px] background-layer top-[40%]"></div>
-    <div class="app-default w-[400px] bg-white top-1/2 px-12 py-14">
+    <div id="app" class="fixed -bottom-full w-[400px] bg-white px-12 py-14 dialog rounded-3xl">
       <h2 class="font-bold text-3xl m-0">549, -</h2>
       <small class="block text-sm pt-3">Pay now, later or split up.</small>
       <button class="buy-btn">BUY ONLINE</button>
@@ -19,17 +20,25 @@
         <div class="items text-sm">
           <div class="item flex flex-row">
             <div class="checkbox">
-              <input id="checkbox-1" type="checkbox" />
-              <label for="checkbox-1"><i class="material-icons">done</i></label>
+              <div class="flex items-center mr-4 mb-2">  
+                <input type="checkbox" id="checkbox-2" class="opacity-0 absolute h-6 w-6" checked />  
+                <div class="checkbox-bg rounded-full w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2">
+                  <i class="material-icons text-md">done</i>
+                </div>
+                <label for="checkbox-2" class="select-none"><span><i>Free shipping</i> over NOK 800</span></label>  
+              </div>  
             </div>
-            <span><a href="#">Lightning fast delivery</a></span>
           </div>
           <div class="item flex flex-row">
             <div class="checkbox">
-              <input id="checkbox-1" type="checkbox" />
-              <label for="checkbox-1"><i class="material-icons">done</i></label>
+              <div class="flex items-center mr-4 mb-2">  
+                <input type="checkbox" id="checkbox-1" class="opacity-0 absolute h-6 w-6" checked />  
+                <div class="checkbox-bg rounded-full w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2">
+                  <i class="material-icons">done</i>
+                </div>
+                <label for="checkbox-1" class="select-none"><span><i>Lightning fast delivery</i></span></label>  
+              </div>  
             </div>
-            <span><a href="#">Free shipping</a> over NOK 800</span>
           </div>
         </div>
       </section>
@@ -45,7 +54,11 @@
       </div>
       <button class="pickup-btn">PICK UP IN STORE</button>
     </div>
-
-    <script type="module" src="/assets/js/main.js"></script>
+    
+    <script>
+      setTimeout(() => {
+        document.getElementById('app').classList.add('open');
+      }, 1000)
+    </script>
   </body>
 </html>

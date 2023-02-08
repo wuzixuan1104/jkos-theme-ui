@@ -33,6 +33,30 @@
   background: linear-gradient(96.58deg, #9CC4FF 0%, #B4A8FF 100%);
 }
 
-.search-input {
-  
+.checkbox-bg {
+  background: linear-gradient(119.36deg, #E9E8FF 0%, #E7F3FF 100%);
 }
+
+.select-none span i {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+input + div i {  
+  @apply opacity-0;  
+} 
+
+input:checked + div i {  
+  @apply opacity-100 ease-in-out duration-300;  
+}  
+
+#app {
+  left: 50%;
+  transform: translateX(-50%);
+}
+#app.open {
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  @apply ease-in duration-700;  
+}
+
