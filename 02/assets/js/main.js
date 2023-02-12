@@ -4,12 +4,7 @@ window.onload = function() {
   // 跑馬燈
   const el = document.getElementById('ticker');
   let tickerHtml = ''
-  let component = `
-    <div class="ticker">
-      <div class="w-[400px]"><img src="assets/img/joinus.png" /></div>
-      <div class="w-[28px]" style="margin-left: 32px;"><img src="assets/img/star.png" /></div>
-    </div>
-  `
+  const component = el.innerHTML;
   for (let i = 0; i < 10; i ++) {
     tickerHtml += component
   }
