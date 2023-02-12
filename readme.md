@@ -1,3 +1,3 @@
-# jkos-theme-ui - test1
+# jkos-theme-ui
 
 https://wuzixuan1104.github.io/jkos-theme-ui-01/

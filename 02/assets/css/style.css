@@ -1,0 +1,71 @@
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @apply pb-96;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.ticker-wrapper {
+  @apply flex;
+}
+
+.ticker {
+  @apply inline-flex flex-row items-center pl-8;
+  animation: ticker-ani 10s linear infinite;
+}
+
+.ticker img {
+  @apply h-[100%] w-[100%];
+  flex-shrink: 0;
+}
+
+.bubble {
+  transform-origin: 0 100%;
+  transform: scale(0);
+  overflow: hidden;
+  animation: bubble-ani 0.15s ease-out 0s forwards;
+  animation-delay: var(--delay);
+}
+
+.message {
+  @apply -translate-x-[200%];
+}
+
+.message.message-reverse  {
+  @apply translate-x-[200%];
+}
+
+.message.open {
+  @apply translate-x-0 ease-in-out;
+  transition-duration: var(--delay);
+}
+
+@keyframes ticker-ani {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bubble-ani {
+  0% {
+    max-height: 100vmax;
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    max-height: 100vmax;
+    overflow: visible;
+    padding-top: 1rem;
+  }
+}

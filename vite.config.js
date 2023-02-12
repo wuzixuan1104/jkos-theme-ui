@@ -1,6 +1,6 @@
 const { resolve } = require('path')
 export default {
-    base: '/jkos-theme-ui-01/',
+    base: '/jkos-theme-ui/',
     plugins: [],
     server: {
         open: '/index.html',
@@ -10,7 +10,6 @@ export default {
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                another: resolve(__dirname, 'another.html')
             }
         }
     }
