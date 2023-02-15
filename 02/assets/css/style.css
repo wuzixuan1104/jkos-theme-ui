@@ -2,8 +2,6 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @apply pb-96;
 }
 
 @tailwind base;
@@ -34,7 +32,8 @@ body {
 }
 
 .message {
-  @apply -translate-x-[200%];
+  @apply -translate-x-[200%] ease-in-out;
+  transition-duration: var(--delay);
 }
 
 .message.message-reverse  {
@@ -42,8 +41,7 @@ body {
 }
 
 .message.open {
-  @apply translate-x-0 ease-in-out;
-  transition-duration: var(--delay);
+  @apply translate-x-0;
 }
 
 @keyframes ticker-ani {

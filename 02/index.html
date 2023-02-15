@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preload" href="assets/css/style.css">
+    <link rel="preload" href="assets/img/title.png">
 
     <title>Animation Page</title>
     <script type="module" src="assets/js/main.js"></script>
   </head>
-  <body class="w-full bg-[#06102B] text-white">
+  <body class="w-full bg-[#06102B] text-white pb-10">
     <section class="flex flex-col items-center">
       <header class="relative mt-[220px] mb-[100px]">
         <img width="150" class="bubble absolute -left-[214px] top-16" style="--delay: 0.5s;" src="assets/img/img2.png"/>
         <img width="250" class="bubble absolute right-[0px] translate-x-1/4 top-36" style="--delay: 1s;" src="assets/img/img.png"/>
         <img width="240" class="bubble absolute -left-[60px] top-[156px]" style="--delay: 0.8s;" src="assets/img/track1.png"/>
         <img width="184" class="bubble absolute -right-[200px] top-2" style="--delay: 1.2s;" src="assets/img/track2.png"/>
-        <div>
-          <img width="710" src="assets/img/title.png"/> 
+        <div class="min-h-[212px]">
+          <img class="min-h-[143px]" width="710" src="assets/img/title.png"/> 
           <h1 class="tracking-[0.8em] text-center mt-9 font-bold text-2xl">互動式網頁設計</h1>
         </div>
       </header>
@@ -36,7 +37,7 @@
     </section>
 
     <!-- 訊息泡泡 -->
-    <section class="mt-64 flex flex-col items-center">
+    <section class="mt-32 flex flex-col items-center">
       <div class="message-wrapper relative flex w-[800px] h-[360px]">
         <div class="message w-full" style="--delay: 1s;">
           <div class="absolute bottom-0">
@@ -47,7 +48,7 @@
           <img class="absolute bottom-[100px] right-[60px]" width="174" src="assets/img/message_question.png" />
         </div>
       </div>
-      <div class="message-wrapper message-left relative flex w-[800px] h-[360px]">
+      <div class="message-wrapper relative flex w-[800px] h-[360px]">
         <div class="message message-reverse w-full" style="--delay: 1.5s;">
           <div class="absolute -top-[5.5rem] -right-16">
             <img class="" width="500" src="assets/img/message_text3.png" />
