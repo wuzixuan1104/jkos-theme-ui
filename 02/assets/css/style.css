@@ -9,18 +9,9 @@ body {
 @tailwind utilities;
 
 
-.ticker-wrapper {
-  @apply flex;
-}
-
 .ticker {
   @apply inline-flex flex-row items-center pl-8;
   animation: ticker-ani 10s linear infinite;
-}
-
-.ticker img {
-  @apply h-[100%] w-[100%];
-  flex-shrink: 0;
 }
 
 .bubble {
@@ -36,7 +27,7 @@ body {
   transition-duration: var(--delay);
 }
 
-.message.message-reverse  {
+.message.reverse  {
   @apply translate-x-[200%];
 }
 
