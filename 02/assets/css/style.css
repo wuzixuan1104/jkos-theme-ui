@@ -1,13 +1,47 @@
 body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap");
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+#body-content {
+  display: none;
+}
+
+#progress {
+  --size: 0;
+  transition: background-color 3s;
+}
+
+#progress .bar {
+  background: #221f46;
+  transition: margin-left 1s;
+  margin-left: calc(var(--size) * 100%);
+}
+
+.typing {
+  display: none;
+  max-height: 48.93px;
+  width: var(--count) + '.4em';
+  overflow: hidden;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.typing.on {
+  display: block;
+  animation: typing 3.5s steps(12, end), blink-caret .75s step-end infinite;
+}
 
 .ticker-wrapper {
   @apply flex;
@@ -66,4 +100,14 @@ body {
     overflow: visible;
     padding-top: 1rem;
   }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12em; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: currentColor; }
 }

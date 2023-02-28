@@ -29,17 +29,24 @@ window.onload = function() {
       const newRatio = entry.intersectionRatio;
       const boundingClientRect = entry.boundingClientRect;
       const scrollingDown = currentRatio !== undefined && newRatio < currentRatio && boundingClientRect.bottom < boundingClientRect.height;
+      const messageEl = entry.target.querySelector('.message');
+      const typingEl = messageEl.querySelector('.typing');
 
       intersectionRatio = newRatio;
 
       if (!entry.isIntersecting) {
-        if (!scrollingDown)
-          entry.target.querySelector('.message').classList.remove('open');
+        if (!scrollingDown) {
+          messageEl.classList.remove('open');
+          setTimeout(() => {
+            typingEl.classList.remove('on')
+          }, 500)
+        }
+     
         return;
       }
-
       
-      entry.target.querySelector('.message').classList.add('open');
+      messageEl.classList.add('open');
+      typingEl.classList.add('on');
     })
   }
 
@@ -49,4 +56,25 @@ window.onload = function() {
   message.forEach((target) => {
     observer.observe(target)
   })
+
+  // 進度條
+  pregressbarChange()
+}
+
+const progressTime = 0; // 300
+const bodyShowDelay = 0; // 2000
+
+function pregressbarChange() {
+  setTimeout(function() {
+    const size = 1;
+    const progress = document.getElementById('progress');
+    progress.style.setProperty('--size', size);
+
+    setTimeout(function() {
+      const loader = document.getElementById('loader-layout');
+      const content = document.getElementById('body-content');
+      content.style.display = 'block'
+      loader.style.display = 'none'
+    }, bodyShowDelay)
+  }, progressTime)
 }
