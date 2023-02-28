@@ -61,8 +61,8 @@ window.onload = function() {
   pregressbarChange()
 }
 
-const progressTime = 0; // 300
-const bodyShowDelay = 0; // 2000
+const progressTime = 300; // 300
+const bodyShowDelay = 2000; // 2000
 
 function pregressbarChange() {
   setTimeout(function() {
