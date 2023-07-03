@@ -1,0 +1,62 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --layer-height: 530px;
+
+}
+
+.app-default {
+  /* height: var(--layer-height); */
+  @apply rounded-3xl absolute -translate-y-1/2 left-1/2 -translate-x-1/2;
+}
+
+.background-layer {
+  background: linear-gradient(119.36deg, #E9E8FF 0%, #E7F3FF 100%);
+}
+
+.buy-btn {
+  @apply rounded-md w-full h-[48px] text-sm font-medium mt-9;
+  background: linear-gradient(96.58deg, #5FF489 0%, #79F4F4 100%);
+  color: #292E5A;
+}
+
+.pickup-btn {
+  @apply rounded-md w-full h-[48px] text-sm font-medium  mt-9 text-[#292E5A];
+  background: linear-gradient(96.58deg, #9CC4FF 0%, #B4A8FF 100%);
+}
+
+.checkbox-bg {
+  background: linear-gradient(119.36deg, #E9E8FF 0%, #E7F3FF 100%);
+}
+
+.select-none span i {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+input + div i {  
+  @apply opacity-0;  
+} 
+
+input:checked + div i {  
+  @apply opacity-100 ease-in-out duration-300;  
+}  
+
+#app {
+  left: 50%;
+  transform: translateX(-50%);
+}
+#app.open {
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  @apply ease-in duration-700;  
+}
+

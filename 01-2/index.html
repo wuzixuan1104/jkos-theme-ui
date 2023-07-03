@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preload" href="assets/css/style.css">
+    <title>Card Page</title>
+    <script type="module" src="assets/js/error.js"></script>
+    <script type="module" src="assets/js/model.js"></script>
+    <script type="module" src="assets/js/api.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+  <body class="h-screen w-full top-0 left-0 fixed bg-[#E7F3FF] text-[#292E5A]">
+    <div class="app-default w-[500px] h-[380px] background-layer top-[40%]"></div>
+    <form id="app" class="fixed -bottom-full w-[400px] bg-white px-12 py-14 dialog rounded-3xl">
+      <h2 class="font-bold text-3xl m-0">Sign In</h2>
+      <section>
+        <span class="block text-sm pt-4 mb-5"><b>hi, welcome to</b> - our application</span>
+      </section>
+      <div class="bg-[#F3F5FF] p-2 rounded-md mt-6">
+        <div class="flex flex-col gap-4 font-medium text-sm py-1">
+          <div class="relative flex flex-1">
+            <i class="absolute top-1/2 -translate-y-1/2 left-2 material-icons">person</i>
+            <input id="username" name="account" class="w-full py-3 rounded-md placeholder:text-[#292E5A]  border border-[#d4d8fb] bg-transparent pl-10" type="text" value="" placeholder="account"/>
+          </div>
+          <div class="relative flex flex-1">
+            <i class="absolute top-1/2 -translate-y-1/2 -left-[62px] material-icons">vpnkey</i>
+            <input id="password" name="password" class="w-full py-3 rounded-md placeholder:text-[#292E5A]  border border-[#d4d8fb] bg-transparent pl-10" type="password" value="" placeholder="password"/>
+          </div>
+        </div>
+      </div>
+      <button class="pickup-btn" type="submit">Submit</button>
+    </form>
+    
+    <script>
+      setTimeout(() => {
+        document.getElementById('app').classList.add('open');
+      }, 1000)
+    </script>
+  </body>
+</html>
